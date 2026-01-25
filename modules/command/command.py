@@ -37,30 +37,33 @@ class Command:  # pylint: disable=too-many-instance-attributes
         cls,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ):
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        pass  #  Create a Command object
+        try:
+            obj = cls(cls.__private_key, connection, target, local_logger)
+            return True, obj
+        except Exception as e:  # pylint: disable=broad-exception-caught
+            local_logger.error(f"Failed to create Command: {e}", True)
+            return False, None
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self._vel_x = 0.0
+        self._vel_y = 0.0
+        self._vel_z = 0.0
+        self._vectors = 0
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self, telemetry_data: telemetry.TelemetryData):
         """
         Make a decision based on received telemetry data.
         """

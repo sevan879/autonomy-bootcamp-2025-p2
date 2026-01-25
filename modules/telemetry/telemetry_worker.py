@@ -18,8 +18,9 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue : queue_proxy_wrapper.QueueProxyWrapper,
+    controller : worker_controller.WorkerController,
+    TELEMETRY_PERIOD : float,
 ) -> None:
     """
     Worker process.
@@ -47,9 +48,29 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-
+    result, telemetry_instance = telemetry.Telemetry.create(
+        connection,
+        local_logger,
+        TELEMETRY_PERIOD,
+    )
     # Main loop: do work.
+    if not result:
+        local_logger.error("Failed to create Telemetry", True)
+        return
+    
+    assert telemetry_instance is not None
 
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        result, telemetry_data = telemetry_instance.run()
+
+        if not result:
+            continue
+
+        # Put an item into the queue
+        # If the queue is full, the worker process will block
+        # until the queue is non-empty
+        output_queue.queue.put(telemetry_data)
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

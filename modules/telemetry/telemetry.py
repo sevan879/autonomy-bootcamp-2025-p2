@@ -76,37 +76,90 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
+        telemetry_period: float,  # seconds
     ):
-        """
-        Falliable create (instantiation) method to create a Telemetry object.
-        """
-        pass  # Create a Telemetry object
+        instance = None
+        try:
+            instance = Telemetry(
+            key=cls.__private_key,
+            connection=connection,
+            local_logger=local_logger,
+            telemetry_period=telemetry_period,)
+        except Exception as e: 
+            local_logger.error(f"Exception raised while creating Telemetry: {e}", True)
+            return False, None
+        return True, instance
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
+        telemetry_period: float,  # seconds
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
 
+        self._connection = connection
+        self._local_logger = local_logger
+        self._telemetry_period = telemetry_period
+
     def run(
         self,
-        args,  # Put your own arguments here
     ):
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
+
+
+
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        start_time = time.time()
+        attitude_msg = None
+        position_msg = None
+        most_recent_timestamp = 0
+
+        while (time.time() - start_time) < self._telemetry_period:
+            try:
+                msg = self._connection.recv_match(
+                    type=["LOCAL_POSITION_NED", "ATTITUDE"],
+                    blocking=False,
+                )
+                if msg is None:
+                    continue
+
+                if msg.get_type() == "LOCAL_POSITION_NED":
+                    position_msg = msg
+                    most_recent_timestamp = msg.time_boot_ms
+                elif msg.get_type() == "ATTITUDE":
+                    attitude_msg = msg
+                    most_recent_timestamp = msg.time_boot_ms
+            except Exception as e:
+                self._local_logger.error(f"Failed to receive MAVLink message: {e}", True)
+                return False, None
+        telemetry_data = TelemetryData()
+        telemetry_data.time_since_boot = most_recent_timestamp
+        if position_msg is not None:
+            telemetry_data.x = position_msg.x
+            telemetry_data.y = position_msg.y
+            telemetry_data.z = position_msg.z
+            telemetry_data.x_velocity = position_msg.vx
+            telemetry_data.y_velocity = position_msg.vy
+            telemetry_data.z_velocity = position_msg.vz
+        if attitude_msg is not None:
+            telemetry_data.roll = attitude_msg.roll
+            telemetry_data.pitch = attitude_msg.pitch
+            telemetry_data.yaw = attitude_msg.yaw
+            telemetry_data.roll_speed = attitude_msg.rollspeed
+            telemetry_data.pitch_speed = attitude_msg.pitchspeed
+            telemetry_data.yaw_speed = attitude_msg.yawspeed
+        return True, telemetry_data
+    
 
 
 # =================================================================================================
