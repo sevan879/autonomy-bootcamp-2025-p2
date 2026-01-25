@@ -20,13 +20,13 @@ from utilities.workers import worker_manager
 
 
 # Play with these numbers to see queue bottlenecks
-COUNTUP_TO_ADD_RANDOM_QUEUE_MAX_SIZE = 5
-ADD_RANDOM_TO_CONCATENATOR_QUEUE_MAX_SIZE = 5
+COUNTUP_TO_ADD_RANDOM_QUEUE_MAX_SIZE = 3
+ADD_RANDOM_TO_CONCATENATOR_QUEUE_MAX_SIZE = 3
 
 # Play with these numbers to see process bottlenecks
-COUNTUP_WORKER_COUNT = 2
-ADD_RANDOM_WORKER_COUNT = 2
-CONCATENATOR_WORKER_COUNT = 2
+COUNTUP_WORKER_COUNT = 5
+ADD_RANDOM_WORKER_COUNT = 1
+CONCATENATOR_WORKER_COUNT = 1
 
 
 # main() is required for early return

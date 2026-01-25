@@ -74,7 +74,7 @@ def main() -> int:
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Create a worker controller
-
+    
     # Create a multiprocess manager for synchronized queues
 
     # Create queues
