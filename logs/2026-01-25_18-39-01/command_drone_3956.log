@@ -1,4 +1,0 @@
-18:39:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 45] Logger initialized
-18:39:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 76] Received a valid command
-18:39:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 76] Received a valid command
-18:39:05: [ERROR] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 74] Turning speed is not the desired value: 3.0

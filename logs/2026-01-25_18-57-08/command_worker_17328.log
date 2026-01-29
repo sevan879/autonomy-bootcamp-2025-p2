@@ -1,3 +1,0 @@
-18:57:10: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 47] Logger initialized
-18:57:10: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 4.00
-18:57:10: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 82] Generated command: CHANGE_ALTITUDE: 1

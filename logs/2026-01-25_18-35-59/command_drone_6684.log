@@ -1,4 +1,0 @@
-18:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 45] Logger initialized
-18:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 76] Received a valid command
-18:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 76] Received a valid command
-18:36:02: [ERROR] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\command_drone.py | main | 71] Not using relative angle: 0.0

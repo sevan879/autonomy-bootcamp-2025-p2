@@ -1,0 +1,63 @@
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 47] Logger initialized
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 4.00
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGE_ALTITUDE: 1
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 1.00
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGE_ALTITUDE: -1
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.67
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 62.32780010512792
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.50
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 62.32780010512792
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.40
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 62.32780010512792
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.33
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 62.292893520088036
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.29
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 62.362706690167805
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 2.50, Z: 0.25
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 63.43494882292201
+20:35:58: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 4.44, Z: 0.22
+20:35:58: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 90.0
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 6.00, Z: 0.20
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 116.56505117707799
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 1.82, Y: 5.45, Z: 0.18
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 133.4292036732051
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 3.33, Y: 5.00, Z: 0.17
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 151.8641524961271
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 4.62, Y: 4.62, Z: 0.15
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 178.4292036732051
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 4.29, Y: 2.86, Z: 0.14
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -156.57654147651178
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 4.00, Y: 1.33, Z: 0.13
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -131.85840734641022
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 3.75, Y: 0.00, Z: 0.12
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -93.1415926535898
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 2.35, Y: 0.00, Z: 0.12
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -43.4292036732051
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 1.11, Y: 0.00, Z: 0.11
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: NO ACTION
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.11
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 46.5707963267949
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 1.00, Z: 0.10
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 61.86415249612711
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 1.90, Z: 0.10
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 43.4292036732051
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 2.73, Z: 0.09
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: NO ACTION
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.87, Y: 2.61, Z: 0.09
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -45.0
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 1.67, Y: 2.50, Z: 0.08
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -90.0
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 2.40, Y: 2.40, Z: 0.08
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -135.0
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 2.31, Y: 1.54, Z: 0.08
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -151.8641524961271
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 2.22, Y: 0.74, Z: 0.07
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: -178.4292036732051
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 2.14, Y: 0.00, Z: 0.07
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 155.0057451497169
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 1.38, Y: 0.00, Z: 0.07
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 138.14159265358978
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.67, Y: 0.00, Z: 0.07
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 113.4234585234882
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 83] Average Velocity - X: 0.00, Y: 0.00, Z: 0.06
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Generated command: CHANGING_YAW: 93.1415926535898

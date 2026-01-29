@@ -89,8 +89,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
         delta_z = self._target.z - telemetry_data.z
         if abs(delta_z) > 0.5:
             self._connection.mav.command_long_send(
-                self._connection.target_system,
-                self._connection.target_component,
+                1,
+                0,
                 mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
                 0,
                 1,  # Altitude change rate (m/s)
@@ -121,10 +121,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
         elif yaw_change < -180:
             yaw_change += 360
         if abs(yaw_change) > 5:
-        
             self._connection.mav.command_long_send(
-                self._connection.target_system,
-                self._connection.target_component,
+                1,
+                0,
                 mavutil.mavlink.MAV_CMD_CONDITION_YAW,
                 0,
                 yaw_change,  # Yaw change in degrees
@@ -132,7 +131,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
             )
             return True, f"CHANGING_YAW: {yaw_change}"
         
-        return None
+        return True, "NO ACTION"
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

@@ -70,6 +70,7 @@ def command_worker(
             telemetry_data = input_queue.queue.get(timeout=1.0)
         except Exception as e:
             local_logger.error(f"Get input queue error: {e}", True)
+            continue
 
         try:
             # Process telemetry data to get command
@@ -85,7 +86,7 @@ def command_worker(
             local_logger.error(f"Command processing error: {e}", True)
             continue
 
-        time.sleep(0.2)
+        time.sleep(0.5)
         
 
 

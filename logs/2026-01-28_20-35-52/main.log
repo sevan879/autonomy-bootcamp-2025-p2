@@ -1,0 +1,34 @@
+20:35:52: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+20:35:53: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 140] Connected!
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGE_ALTITUDE: 1
+20:35:54: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGE_ALTITUDE: -1
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 62.32780010512792
+20:35:55: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 62.32780010512792
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 62.32780010512792
+20:35:56: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 62.292893520088036
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 62.362706690167805
+20:35:57: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 63.43494882292201
+20:35:58: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 90.0
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 116.56505117707799
+20:35:59: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 133.4292036732051
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 151.8641524961271
+20:36:00: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 178.4292036732051
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -156.57654147651178
+20:36:01: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -131.85840734641022
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -93.1415926535898
+20:36:02: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -43.4292036732051
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: NO ACTION
+20:36:03: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 46.5707963267949
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 61.86415249612711
+20:36:04: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 43.4292036732051
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: NO ACTION
+20:36:05: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -45.0
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -90.0
+20:36:06: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -135.0
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -151.8641524961271
+20:36:07: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: -178.4292036732051
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 155.0057451497169
+20:36:08: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 138.14159265358978
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 113.4234585234882
+20:36:09: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: CHANGING_YAW: 93.1415926535898
+20:36:10: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] Receiver output: None
