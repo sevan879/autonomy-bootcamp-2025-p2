@@ -1,0 +1,22 @@
+22:53:12: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+22:53:14: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 117] Connected!
+22:53:14: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:15: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:16: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:17: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:18: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:20: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:21: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:22: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:23: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:24: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: False
+22:53:25: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: False
+22:53:26: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: False
+22:53:27: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:28: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:29: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:30: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:31: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:32: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:33: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True
+22:53:34: [INFO] [C:\Users\revan\Documents\GitHub\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Receiver output: True

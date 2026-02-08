@@ -49,7 +49,7 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller : worker_controller.WorkerController,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
@@ -68,9 +68,7 @@ def read_queue(
     while controller.is_exit_requested() is False:
         try:
             msg = output_queue.queue.get(timeout=1)
-            
 
-            
             main_logger.info(f"Receiver output: {msg}")
         except queue.Empty:
             continue
@@ -135,12 +133,7 @@ def main() -> int:
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
-    telemetry_worker.telemetry_worker(
-        connection,
-        output_queue,
-        controller,
-        TELEMETRY_PERIOD
-    )
+    telemetry_worker.telemetry_worker(connection, output_queue, controller, TELEMETRY_PERIOD)
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================

@@ -57,9 +57,9 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller:worker_controller.WorkerController,
-    input_queue:queue_proxy_wrapper.QueueProxyWrapper,
-    output_queue:queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Stop the workers.
@@ -77,19 +77,17 @@ def read_queue(
     """
     Read and print the output queue.
     """
-    while controller.is_exit_requested() is False:
+    while not controller.is_exit_requested() or not output_queue.queue.empty():
         try:
-            msg = output_queue.queue.get(timeout=1)
-
-            main_logger.info(f"Receiver output: {msg}")
+            msg = output_queue.queue.get(timeout=0.2)
         except queue.Empty:
             continue
-
+        main_logger.info(f"Received command: {msg}", True)
 
 
 def put_queue(
     input_queue: queue_proxy_wrapper.QueueProxyWrapper,
-    data : telemetry.TelemetryData,
+    data: telemetry.TelemetryData,
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
@@ -237,8 +235,9 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, 
-                    (controller, input_queue, output_queue)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)
+    ).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(input_queue, path)).start()

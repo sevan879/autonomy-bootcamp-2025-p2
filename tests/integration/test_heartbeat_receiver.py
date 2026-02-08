@@ -67,9 +67,7 @@ def read_queue(
     while controller.is_exit_requested() is False:
         try:
             msg = output_queue.queue.get(timeout=1)
-            
 
-            
             main_logger.info(f"Receiver output: {msg}")
         except queue.Empty:
             continue

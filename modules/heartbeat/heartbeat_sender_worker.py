@@ -19,8 +19,7 @@ from ..common.modules.logger import logger
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
     heartbeat_period: float,
-    disconnect_period: int,
-    controller: worker_controller.WorkerController
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
@@ -48,33 +47,17 @@ def heartbeat_sender_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_sender.HeartbeatSender)
-   
-
-   # Instantiate logger
-
-    worker_name = pathlib.Path(__file__).stem
-    process_id = os.getpid()
-    result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
-    if not result:
-        print("ERROR: Worker failed to create logger")
-        return
-    assert local_logger is not None
 
     result, heartbeat_sender_instance = heartbeat_sender.HeartbeatSender.create(
         connection=connection,
         local_logger=local_logger,
-        heartbeat_period=heartbeat_period,
-        disconnect_period=disconnect_period,
     )
 
     if not result:
         local_logger.error("Failed to create HeartbeatSender instance", True)
         return
-    
-    assert heartbeat_sender_instance is not None
 
-    
-    local_logger.info("Logger initialized lol", True)
+    assert heartbeat_sender_instance is not None
 
     # Main loop: do work.
     while not controller.is_exit_requested():
@@ -87,6 +70,7 @@ def heartbeat_sender_worker(
         elapsed = time.time() - start_time
         sleep_time = max(0.0, heartbeat_period - elapsed)
         time.sleep(sleep_time)
+    local_logger.info("Exiting heartbeat sender worker", True)
 
 
 # =================================================================================================

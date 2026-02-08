@@ -14,6 +14,7 @@ from ..common.modules.logger import logger
 
 import time
 
+
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
@@ -69,7 +70,7 @@ def heartbeat_receiver_worker(
         start_time = time.time()
         # Run receiver
         state = receiver.run()
-        # Put state into output queue loll 
+        # Put state into output queue loll
         output_queue.queue.put(state)
 
         elapsed = time.time() - start_time

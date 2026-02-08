@@ -27,13 +27,12 @@ class HeartbeatSender:
         """
         try:
             instance = HeartbeatSender(
-            cls.__private_key,
-            connection=connection,
-            local_logger=local_logger)
+                cls.__private_key, connection=connection, local_logger=local_logger
+            )
         except Exception as e:
             local_logger.error(f"Exception raised while creating HeartbeatSender: {e}", True)
             return False, None
-        
+
         return True, instance
 
     def __init__(
@@ -41,7 +40,7 @@ class HeartbeatSender:
         key: object,
         connection: mavutil.mavfile,
         local_logger: logger.Logger,
-    ):
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         # Do any intializiation here
@@ -50,7 +49,7 @@ class HeartbeatSender:
 
     def run(
         self,
-    ):
+    ) -> bool:
         """
         Attempt to send a heartbeat message.
         """
@@ -67,7 +66,7 @@ class HeartbeatSender:
         except Exception as e:
             self.local_logger.error(f"Failed to send heartbeat: {e}", True)
             return False
-        
+
         self.local_logger.info("Heartbeat sent successfully", True)
         return True
 

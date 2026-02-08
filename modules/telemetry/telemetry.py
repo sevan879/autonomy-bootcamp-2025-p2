@@ -78,15 +78,16 @@ class Telemetry:
         connection: mavutil.mavfile,
         local_logger: logger.Logger,
         telemetry_period: float,  # seconds
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         instance = None
         try:
             instance = Telemetry(
-            key=cls.__private_key,
-            connection=connection,
-            local_logger=local_logger,
-            telemetry_period=telemetry_period,)
-        except Exception as e: 
+                key=cls.__private_key,
+                connection=connection,
+                local_logger=local_logger,
+                telemetry_period=telemetry_period,
+            )
+        except Exception as e:
             local_logger.error(f"Exception raised while creating Telemetry: {e}", True)
             return False, None
         return True, instance
@@ -108,13 +109,11 @@ class Telemetry:
 
     def run(
         self,
-    ):
+    ) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
-
-
 
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
@@ -159,7 +158,6 @@ class Telemetry:
             telemetry_data.pitch_speed = attitude_msg.pitchspeed
             telemetry_data.yaw_speed = attitude_msg.yawspeed
         return True, telemetry_data
-    
 
 
 # =================================================================================================

@@ -18,9 +18,9 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    output_queue : queue_proxy_wrapper.QueueProxyWrapper,
-    controller : worker_controller.WorkerController,
-    TELEMETRY_PERIOD : float,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
+    TELEMETRY_PERIOD: float,
 ) -> None:
     """
     Worker process.
@@ -57,7 +57,7 @@ def telemetry_worker(
     if not result:
         local_logger.error("Failed to create Telemetry", True)
         return
-    
+
     assert telemetry_instance is not None
 
     while not controller.is_exit_requested():
@@ -71,6 +71,7 @@ def telemetry_worker(
         # If the queue is full, the worker process will block
         # until the queue is non-empty
         output_queue.queue.put(telemetry_data)
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
