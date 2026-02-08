@@ -75,7 +75,7 @@ def command_worker(
         try:
             # Process telemetry data to get command
             result, command_data = command_instance.run(telemetry_data)
-        except Exception as e:
+        except (AttributeError, ValueError, EOFError, AssertionError) as e:
             local_logger.error(f"Command processing error: {e}", True)
             continue
         if not result:

@@ -37,7 +37,7 @@ class HeartbeatReceiver:
                 disconnect_period=disconnect_period,
             )
             return True, instance
-        except Exception as e:
+        except (AttributeError, ValueError, AssertionError, EOFError) as e:
             local_logger.log_error(f"HeartbeatReceiver creation failed: {e}")
             return False, None
 
@@ -66,6 +66,9 @@ class HeartbeatReceiver:
     def run(
         self,
     ) -> bool:
+        """
+        Attempt to receive a heartbeat message.
+        """
 
         print(self._local_logger)
         msg = None
@@ -75,7 +78,7 @@ class HeartbeatReceiver:
                 blocking=True,
                 timeout=self.__heartbeat_period,
             )
-        except Exception as e:
+        except (AttributeError, EOFError) as e:
             self._local_logger.error(f"Failed to receive heartbeat: {e}", True)
             return False
 

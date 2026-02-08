@@ -114,7 +114,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                     0,
                     self._target.z,  # Target altitude
                 )
-            except Exception as e:
+            except (AttributeError, EOFError) as e:
                 self._logger.error(f"Failed to send altitude command: {e}", True)
                 return False, None
 
@@ -160,7 +160,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                     0,
                     0,
                 )
-            except Exception as e:
+            except (AttributeError, EOFError) as e:
                 self._logger.error(f"Failed to send yaw command: {e}", True)
                 return False, None
 
