@@ -68,11 +68,6 @@ class HeartbeatReceiver:
     ) -> bool:
 
         print(self._local_logger)
-        """
-        Attempt to recieve a heartbeat message.
-        If disconnected for over a threshold number of periods,
-        the connection is considered disconnected.
-        """
         msg = None
         try:
             msg = self.__connection.recv_match(

@@ -20,7 +20,7 @@ def telemetry_worker(
     connection: mavutil.mavfile,
     output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
-    TELEMETRY_PERIOD: float,
+    telemetry_period: float,
 ) -> None:
     """
     Worker process.
@@ -51,7 +51,7 @@ def telemetry_worker(
     result, telemetry_instance = telemetry.Telemetry.create(
         connection,
         local_logger,
-        TELEMETRY_PERIOD,
+        telemetry_period,
     )
     # Main loop: do work.
     if not result:

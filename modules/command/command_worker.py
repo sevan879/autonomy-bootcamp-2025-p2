@@ -5,7 +5,6 @@ Command worker to make decisions based on Telemetry Data.
 import os
 import pathlib
 import queue
-import time
 
 from pymavlink import mavutil
 

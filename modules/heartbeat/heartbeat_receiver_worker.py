@@ -5,14 +5,13 @@ Heartbeat worker that sends heartbeats periodically.
 import os
 import pathlib
 
+import time
 from pymavlink import mavutil
 
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
 from . import heartbeat_receiver
 from ..common.modules.logger import logger
-
-import time
 
 
 # =================================================================================================
