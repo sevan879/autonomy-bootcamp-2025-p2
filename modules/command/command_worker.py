@@ -71,9 +71,6 @@ def command_worker(
         except queue.Empty:
             # This is fine! It just means no new data arrived.
             continue
-        except Exception as e:
-            local_logger.error(f"Unexpected queue error: {e}", True)
-            continue
 
         try:
             # Process telemetry data to get command

@@ -79,6 +79,9 @@ class Telemetry:
         local_logger: logger.Logger,
         telemetry_period: float,  # seconds
     ) -> "tuple[True, Telemetry] | tuple[False, None]":
+        """
+        Factory method to safely instantiate the Telemetry class.
+        """
         instance = None
         try:
             instance = Telemetry(
@@ -87,7 +90,7 @@ class Telemetry:
                 local_logger=local_logger,
                 telemetry_period=telemetry_period,
             )
-        except Exception as e:
+        except (AttributeError, ValueError, AssertionError) as e:
             local_logger.error(f"Exception raised while creating Telemetry: {e}", True)
             return False, None
         return True, instance
@@ -109,7 +112,7 @@ class Telemetry:
 
     def run(
         self,
-    ) -> "tuple[bool, TelemetryData | None]":
+    ) -> None:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
@@ -138,7 +141,7 @@ class Telemetry:
                 elif msg.get_type() == "ATTITUDE":
                     attitude_msg = msg
                     most_recent_timestamp = msg.time_boot_ms
-            except Exception as e:
+            except (AttributeError, ValueError, EOFError, AssertionError) as e:
                 self._local_logger.error(f"Failed to receive MAVLink message: {e}", True)
                 return False, None
         telemetry_data = TelemetryData()

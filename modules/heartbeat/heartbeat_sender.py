@@ -29,7 +29,7 @@ class HeartbeatSender:
             instance = HeartbeatSender(
                 cls.__private_key, connection=connection, local_logger=local_logger
             )
-        except Exception as e:
+        except (AssertionError, AttributeError) as e:
             local_logger.error(f"Exception raised while creating HeartbeatSender: {e}", True)
             return False, None
 
@@ -63,7 +63,7 @@ class HeartbeatSender:
                 0,
             )
             self.local_logger.info("Heartbeat sent", True)
-        except Exception as e:
+        except (AttributeError, EOFError) as e:
             self.local_logger.error(f"Failed to send heartbeat: {e}", True)
             return False
 
