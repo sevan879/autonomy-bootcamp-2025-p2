@@ -6,7 +6,6 @@ import multiprocessing as mp
 import queue
 import subprocess
 import threading
-import time
 
 from pymavlink import mavutil
 

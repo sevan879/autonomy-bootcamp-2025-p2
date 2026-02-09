@@ -4,7 +4,6 @@ Test the command worker with a mocked drone.
 
 import math
 import multiprocessing as mp
-import queue
 import subprocess
 import threading
 import time
