@@ -53,11 +53,11 @@ def telemetry_worker(
         local_logger,
         telemetry_period,
     )
+    local_logger.info("Telemetry instance created", True)
     # Main loop: do work.
     if not result:
         local_logger.error("Failed to create Telemetry", True)
         return
-
     assert telemetry_instance is not None
 
     while not controller.is_exit_requested():
@@ -66,7 +66,7 @@ def telemetry_worker(
 
         if not result:
             continue
-
+        local_logger.info(f"Delivering telemetry data: {telemetry_data}", True)
         # Put an item into the queue
         # If the queue is full, the worker process will block
         # until the queue is non-empty

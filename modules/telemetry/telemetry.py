@@ -125,12 +125,14 @@ class Telemetry:
         attitude_msg = None
         position_msg = None
         most_recent_timestamp = 0
+        telemetry_data = TelemetryData()
 
         while (time.time() - start_time) < self._telemetry_period:
             try:
                 msg = self._connection.recv_match(
                     type=["LOCAL_POSITION_NED", "ATTITUDE"],
-                    blocking=False,
+                    blocking=True,
+                    timeout=0.2
                 )
                 if msg is None:
                     continue
@@ -144,23 +146,28 @@ class Telemetry:
             except (AttributeError, ValueError, EOFError, AssertionError) as e:
                 self._local_logger.error(f"Failed to receive MAVLink message: {e}", True)
                 return False, None
-        telemetry_data = TelemetryData()
-        telemetry_data.time_since_boot = most_recent_timestamp
-        if position_msg is not None:
-            telemetry_data.x = position_msg.x
-            telemetry_data.y = position_msg.y
-            telemetry_data.z = position_msg.z
-            telemetry_data.x_velocity = position_msg.vx
-            telemetry_data.y_velocity = position_msg.vy
-            telemetry_data.z_velocity = position_msg.vz
-        if attitude_msg is not None:
-            telemetry_data.roll = attitude_msg.roll
-            telemetry_data.pitch = attitude_msg.pitch
-            telemetry_data.yaw = attitude_msg.yaw
-            telemetry_data.roll_speed = attitude_msg.rollspeed
-            telemetry_data.pitch_speed = attitude_msg.pitchspeed
-            telemetry_data.yaw_speed = attitude_msg.yawspeed
-        return True, telemetry_data
+            
+            telemetry_data.time_since_boot = most_recent_timestamp
+            if position_msg is not None:
+                self._local_logger.info("Position Found", True)
+                telemetry_data.x = position_msg.x
+                telemetry_data.y = position_msg.y
+                telemetry_data.z = position_msg.z
+                telemetry_data.x_velocity = position_msg.vx
+                telemetry_data.y_velocity = position_msg.vy
+                telemetry_data.z_velocity = position_msg.vz
+            if attitude_msg is not None:
+                self._local_logger.info("Attitude Found", True)
+                telemetry_data.roll = attitude_msg.roll
+                telemetry_data.pitch = attitude_msg.pitch
+                telemetry_data.yaw = attitude_msg.yaw
+                telemetry_data.roll_speed = attitude_msg.rollspeed
+                telemetry_data.pitch_speed = attitude_msg.pitchspeed
+                telemetry_data.yaw_speed = attitude_msg.yawspeed
+            if position_msg is not None and attitude_msg is not None:
+                return True, telemetry_data
+        self._local_logger.warning("Timed out waiting for telemetry data", True)
+        return False, None
 
 
 # =================================================================================================

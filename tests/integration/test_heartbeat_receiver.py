@@ -70,8 +70,10 @@ def read_queue(
     while controller.is_exit_requested() is False:
         try:
             msg = output_queue.queue.get(timeout=1)
-
-            main_logger.info(f"Receiver output: {msg}")
+            if msg:
+                main_logger.info(f"Receiver output: Connected", True)
+            else:
+                main_logger.info(f"Receiver output: Disconnected", True)
         except queue.Empty:
             continue
         time.sleep(0.1)

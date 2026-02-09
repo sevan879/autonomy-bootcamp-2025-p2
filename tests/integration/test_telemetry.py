@@ -68,11 +68,9 @@ def read_queue(
     while controller.is_exit_requested() is False:
         try:
             msg = output_queue.queue.get(timeout=1)
-
             main_logger.info(f"Receiver output: {msg}")
         except queue.Empty:
             continue
-        time.sleep(0.1)
         # Add logic to read from your worker's output queue and print it using the logger
 
 
@@ -132,7 +130,6 @@ def main() -> int:
 
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
-
     telemetry_worker.telemetry_worker(connection, output_queue, controller, TELEMETRY_PERIOD)
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

@@ -230,16 +230,11 @@ def main() -> int:
             if heartbeat_status == "Disconnected":
                 main_logger.warning("Drone disconnected!")
                 break
-        except queue.Empty:
-            main_logger.warning("No heartbeat status received, assuming drone disconnected!")
-            break
-
-        # Read from command queue and log any commands that we make
-        try:
             command_msg = command_to_main_queue.queue.get(timeout=0.2)
             main_logger.info(f"Command output: {command_msg}")
         except queue.Empty:
-            continue
+            main_logger.warning("No heartbeat status received, assuming drone disconnected!")
+            break
 
     # Stop the processes
 

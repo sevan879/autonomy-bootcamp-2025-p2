@@ -70,7 +70,6 @@ class HeartbeatReceiver:
         Attempt to receive a heartbeat message.
         """
 
-        print(self._local_logger)
         msg = None
         try:
             msg = self.__connection.recv_match(
