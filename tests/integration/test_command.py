@@ -82,11 +82,6 @@ def read_queue(
             msg = output_queue.queue.get(timeout=0.2)
             main_logger.info(f"Received command: {msg}", True)
         time.sleep(0.1)
-        """try:
-            msg = output_queue.queue.get(timeout=0.2)
-        except queue.Empty:
-            continue
-        main_logger.info(f"Received command: {msg}", True)"""
 
 
 def put_queue(

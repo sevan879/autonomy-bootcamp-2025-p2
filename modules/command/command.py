@@ -138,7 +138,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
 
         yaw_diff = math.degrees(math.atan2(delta_y, delta_x))
 
-        self._logger.info(f"Current Yaw: {telemetry_data.yaw:.2f}, Desired Yaw: {yaw_diff:.2f}", True)
+        self._logger.info(
+            f"Current Yaw: {telemetry_data.yaw:.2f}, Desired Yaw: {yaw_diff:.2f}", True
+        )
 
         if yaw_diff > 180:
             yaw_diff -= 360

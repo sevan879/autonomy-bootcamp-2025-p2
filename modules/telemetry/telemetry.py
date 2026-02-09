@@ -130,9 +130,7 @@ class Telemetry:
         while (time.time() - start_time) < self._telemetry_period:
             try:
                 msg = self._connection.recv_match(
-                    type=["LOCAL_POSITION_NED", "ATTITUDE"],
-                    blocking=True,
-                    timeout=0.2
+                    type=["LOCAL_POSITION_NED", "ATTITUDE"], blocking=True, timeout=0.2
                 )
                 if msg is None:
                     continue
@@ -146,7 +144,7 @@ class Telemetry:
             except (AttributeError, ValueError, EOFError, AssertionError) as e:
                 self._local_logger.error(f"Failed to receive MAVLink message: {e}", True)
                 return False, None
-            
+
             telemetry_data.time_since_boot = most_recent_timestamp
             if position_msg is not None:
                 self._local_logger.info("Position Found", True)
