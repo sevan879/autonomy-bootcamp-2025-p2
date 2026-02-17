@@ -22,7 +22,6 @@ class HeartbeatReceiver:
         cls,
         connection: mavutil.mavfile,
         local_logger: logger.Logger,
-        heartbeat_period: float,
         disconnect_period: int,
     ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """
@@ -33,7 +32,6 @@ class HeartbeatReceiver:
                 key=cls.__private_key,
                 connection=connection,
                 local_logger=local_logger,
-                heartbeat_period=heartbeat_period,
                 disconnect_period=disconnect_period,
             )
             return True, instance
@@ -46,7 +44,6 @@ class HeartbeatReceiver:
         key: object,
         connection: mavutil.mavfile,
         local_logger: logger.Logger,
-        heartbeat_period: float,
         disconnect_period: int,
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
@@ -57,7 +54,6 @@ class HeartbeatReceiver:
         self.__connection = connection
 
         # periods in seconds or floats
-        self.__heartbeat_period = heartbeat_period
         self.__disconnect_period = disconnect_period
 
         self.__missed = 0
