@@ -53,7 +53,6 @@ def heartbeat_receiver_worker(
     result, receiver = heartbeat_receiver.HeartbeatReceiver.create(
         connection,
         local_logger,
-        heartbeat_period,
         disconnect_period,
     )
 
