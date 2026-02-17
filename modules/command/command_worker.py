@@ -82,7 +82,6 @@ def command_worker(
             continue
 
         if command_data is not None:
-            local_logger.info(f"Generated command: {command_data}", True)
             output_queue.queue.put(command_data)
     local_logger.info("Worker Done", True)
 

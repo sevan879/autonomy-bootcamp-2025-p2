@@ -75,7 +75,7 @@ class HeartbeatReceiver:
             msg = self.__connection.recv_match(
                 type="HEARTBEAT",
                 blocking=True,
-                timeout=self.__heartbeat_period,
+                timeout=0.01,
             )
         except (AttributeError, EOFError) as e:
             self._local_logger.error(f"Failed to receive heartbeat: {e}", True)
